@@ -1,0 +1,54 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# JackRabbit Repository Test log
+derby.log
+
+# Maven
+target/
+pom.xml.versionsBackup
+
+# Dist files
+aem-platform-asadventure/app-package/jcr_root/etc/designs/platform-asadventure/clientlibs/css/components/core/store/store-detail.css
+aem-platform-asadventure/app-package/jcr_root/etc/designs/platform-asadventure/clientlibs/css/components/theme/store/store-detail.css
+aem-platform-asadventure/app-package/jcr_root/apps/platform-asadventure/components/general/as-services/clientlibs/js/templates.js
+aem-platform-asadventure/app-package/jcr_root/apps/platform-asadventure/components/**/dist/
+
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs/css/
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs/fonts/
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs/googleMaps/
+
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs.author/css/
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs.author/fonts/
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs.author/googleMaps/
+
+aem-platform-asadventure/app-package/jcr_root/etc/clientlibs/platform-widgets/css/
+aem-platform-asadventure/app-package/jcr_root/etc/clientlibs/platform-widgets/fonts/
+
+aem-platform-asadventure/app-package/jcr_root/etc/designs/platform-asadventure/clientlibs/css/
+aem-platform-asadventure/app-package/jcr_root/etc/designs/platform-asadventure/clientlibs/fonts/
+
+# Author dist files
+aem-businessunit-*/app-package/jcr_root/etc/designs/**/clientlibs.author/css/
+
+# Node and Bower packages
+aem-styling/bower_components/
+aem-styling/build/
+aem-styling/node_modules/
+aem-styling/.sass-cache/
+aem-platform-asadventure/app-package/jcr_root/etc/designs/platform-asadventure/clientlibs/scripts/vendor_footer/libs/bowerlibs/
+aem-platform-asadventure/app-package/jcr_root/etc/designs/platform-asadventure/clientlibs/scripts/vendor_footer/libs/node_modules/
+aem-gulp-tasks/node_modules/
+aem-gulp-tasks/typings/
+
+
