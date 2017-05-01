@@ -1,8 +1,8 @@
 <div data-sly-use.ctrl="be.hogent.aem.core.controller.CategoryController" data-sly-unwrap>
-
     <div data-sly-test="${ctrl.categories}">
         <ul data-sly-list.category="${ctrl.categories}">
-            <li><a href="locahost:4502/content/aem-test-content/en/lister.html?q=${category.name}">${category.name}</a>
+            <li>
+                <a href="locahost:4502/content/aem-test-content/en/lister.html?q=${category.name}">${category.name}</a>
             </li>
         </ul>
     </div>
