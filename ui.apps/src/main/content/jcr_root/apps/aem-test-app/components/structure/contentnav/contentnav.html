@@ -1,0 +1,11 @@
+<ul class="contentnav" data-sly-use.contentnav="contentnav.js" data-sly-list="${contentnav.items}">
+    <li class="tnav__item ${item.selected && 'nav__item--selected'}">
+        <a class="topnav__link" href="${item.page.path}.html">${item.page.title}</a>
+    </li>
+</ul>
+
+<ul class="languagenav" data-sly-use.languagenav="languagenav.js" data-sly-list="${languagenav.items}">
+    <li class="nav__item ${item.selected && 'nav__item--selected'}">
+        <a class="topnav__link" href="${item.page.path}.html">${item.page.title}</a>
+    </li>
+</ul>
