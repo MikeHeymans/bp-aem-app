@@ -9,6 +9,5 @@
     <jcr:content
             jcr:primaryType="cq:PageContent"
             sling:resourceType="aem-test-app/components/structure/page">
-
     </jcr:content>
 </jcr:root>
