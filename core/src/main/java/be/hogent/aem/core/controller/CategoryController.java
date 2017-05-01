@@ -27,11 +27,11 @@ public class CategoryController {
     public List<CategoryDTO> getCategories() {
         categoryService.findAll();
         List<CategoryDTO> categoryDTOs = Arrays.asList(
-                new CategoryDTO("broeken"),
-                new CategoryDTO("jassen"),
-                new CategoryDTO("slaapzakken"),
-                new CategoryDTO("sjaals"),
-                new CategoryDTO("goPro or goHome")
+                new CategoryDTO(1l, "broeken"),
+                new CategoryDTO(2l, "jassen"),
+                new CategoryDTO(3l, "slaapzakken"),
+                new CategoryDTO(4l, "sjaals"),
+                new CategoryDTO(5l, "goPro or goHome")
         );
         return categoryDTOs.subList(0, Math.min(Math.abs(Integer.parseInt(amount)), categoryDTOs.size()));
     }

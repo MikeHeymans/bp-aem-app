@@ -2,7 +2,9 @@
     <div data-sly-test="${ctrl.categories}">
         <ul data-sly-list.category="${ctrl.categories}">
             <li>
-                <a href="/content/aem-test-content/en/lister.html?q=${category.name}">${category.name}</a>
+                <a href="'/content/aem-test-content/en/categories/{0}' @  format=[category.id], extension='html'">
+                    ${category.name}
+                </a>
             </li>
         </ul>
     </div>
