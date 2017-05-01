@@ -39,7 +39,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--<Bundle-Activator>com.hogent.aem.core.osgi.Activator</Bundle-Activator>-->
+                        <Bundle-Activator>be.hogent.aem.core.osgi.Activator</Bundle-Activator>
                         <Sling-Model-Packages>
                             be.hogent.aem.core,
                             be.hogent.aem.core.models,
@@ -48,6 +48,9 @@
                             be.hogent.aem.core.rest,
                             be.hogent.aem.core.service
                         </Sling-Model-Packages>
+                        <Embed-Dependency>
+                            javax.ws.rs
+                        </Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
@@ -143,7 +146,6 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
         </dependency>
     </dependencies>
 </project>
