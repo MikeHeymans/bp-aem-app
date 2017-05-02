@@ -124,7 +124,12 @@
                         <embedded>
                             <groupId>be.hogent</groupId>
                             <artifactId>bp-aem-app.core</artifactId>
-                            <target>/apps/aem-test-app/install</target>
+                            <target>/apps/aem-test-app/install/02</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.eclipsesource.jaxrs</groupId>
+                            <artifactId>jersey-all</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
                         </embedded>
                     </embeddeds>
                 </configuration>
@@ -221,6 +226,11 @@
         <dependency>
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.eclipsesource.jaxrs</groupId>
+            <artifactId>jersey-all</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -172,9 +172,6 @@
                             </configuration>
                         </execution>
                     </executions>
-                    <configuration>
-                        <outputDirectory>${project.build.directory}/classes</outputDirectory>
-                    </configuration>
                     <dependencies>
                         <dependency>
                             <groupId>org.slf4j</groupId>
@@ -449,6 +446,14 @@
                 <version>2.1</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- Rest API -->
+            <dependency>
+                <groupId>com.eclipsesource.jaxrs</groupId>
+                <artifactId>jersey-all</artifactId>
+                <version>2.22.2</version>
+            </dependency>
+
             <!-- JCR -->
             <dependency>
                 <groupId>javax.jcr</groupId>

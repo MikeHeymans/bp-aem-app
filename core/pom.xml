@@ -48,9 +48,6 @@
                             be.hogent.aem.core.rest,
                             be.hogent.aem.core.service
                         </Sling-Model-Packages>
-                        <Embed-Dependency>
-                            javax.ws.rs
-                        </Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
