@@ -2,10 +2,10 @@ package be.hogent.aem.core.controller;
 
 import be.hogent.aem.core.dto.CategoryDTO;
 import be.hogent.aem.core.service.CategoryService;
-import org.apache.felix.scr.annotations.Reference;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 
 import javax.inject.Inject;
@@ -21,11 +21,11 @@ public class CategoryController {
     @Named("amount")
     @Optional
     private String amount;
-    @Reference
+    @OSGiService
     private CategoryService categoryService;
 
     public List<CategoryDTO> getCategories() {
-        categoryService.findAll();
+//        categoryService.findAll();
         List<CategoryDTO> categoryDTOs = Arrays.asList(
                 new CategoryDTO(1l, "broeken"),
                 new CategoryDTO(2l, "jassen"),
@@ -33,6 +33,6 @@ public class CategoryController {
                 new CategoryDTO(4l, "sjaals"),
                 new CategoryDTO(5l, "goPro or goHome")
         );
-        return categoryDTOs.subList(0, Math.min(Math.abs(Integer.parseInt(amount)), categoryDTOs.size()));
+        return categoryDTOs;
     }
 }

@@ -1,11 +1,9 @@
 <div data-sly-use.ctrl="be.hogent.aem.core.controller.CategoryController" data-sly-unwrap>
-    <div data-sly-test="${ctrl.categories}">
-        <ul data-sly-list.category="${ctrl.categories}">
-            <li>
-                <a href="'/content/aem-test-content/en/categories/{0}' @  format=[category.id], extension='html'">
-                    ${category.name}
-                </a>
-            </li>
-        </ul>
-    </div>
+    <ul class="dropdown-menu" data-sly-list.category="${ctrl.categories}">
+        <li>
+            <a href="'/content/aem-test-content/en/categories/{0}' @  format=[category.id], extension='html'">
+                ${category.name}
+            </a>
+        </li>
+    </ul>
 </div>

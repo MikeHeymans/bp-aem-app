@@ -7,6 +7,8 @@ import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.jackrabbit.commons.JcrUtils;
 import org.apache.sling.jcr.api.SlingRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
@@ -22,7 +24,7 @@ import java.util.List;
 public class CategoryRepository {
     public static final String DATA_ROOT = "/etc/commerce/bp-aem-app";
     public static final String MODEL_PATH = DATA_ROOT + "/categories";
-
+    private final Logger logger = LoggerFactory.getLogger(CategoryRepository.class);
     @Reference
     protected SlingRepository repository;
 
@@ -81,6 +83,7 @@ public class CategoryRepository {
     }
 
     private Node getCategoryNode(Session session, Long cateogry) throws RepositoryException {
+        logger.debug("getting category: " + getPath(cateogry));
         return session.getNode(getPath(cateogry));
     }
 

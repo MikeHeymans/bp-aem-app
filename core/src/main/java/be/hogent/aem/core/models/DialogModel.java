@@ -15,6 +15,7 @@
  */
 package be.hogent.aem.core.models;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
@@ -43,10 +44,10 @@ public class DialogModel {
     private String text;
 
     public String getTitle() {
-        return title;
+        return StringUtils.isNotBlank(title) ? title : "Please provide a title";
     }
 
     public String getText() {
-        return text;
+        return StringUtils.isNotBlank(text) ? text : "Please provide a Test";
     }
 }

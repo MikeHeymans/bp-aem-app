@@ -4,4 +4,5 @@
           jcr:primaryType="cq:Component"
           jcr:title="bachelorproef-van-mike Page"
           sling:resourceSuperType="wcm/foundation/components/page"
-          componentGroup=".hidden"/>
+          componentGroup=".hidden">
+</jcr:root>

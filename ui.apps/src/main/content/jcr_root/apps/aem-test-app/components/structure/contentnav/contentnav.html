@@ -1,11 +1,13 @@
-<ul>
-    <li class="nav__item">
-        Home
-    </li>
-    <li class="nav__item">
-        Contact
-    </li>
-    <li>
-        <sly data-sly-resource="${'categoryList' @ resourceType='aem-test-app/components/content/categorylist'}"/>
-    </li>
-</ul>
+<header class="row">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Contact</a></li>
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+               aria-expanded="false">
+                Category <span class="caret"></span>
+            </a>
+            <sly data-sly-resource="${'categoryList' @ resourceType='aem-test-app/components/content/categorylist'}"/>
+        </li>
+    </ul>
+</header>
