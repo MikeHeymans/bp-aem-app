@@ -1,5 +1,6 @@
 package be.hogent.aem.core.osgi;
 
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ public class Activator implements BundleActivator {
     @Override
     public void start(BundleContext bundleContext) throws Exception {
         LOG.debug("Activating bundle.");
+        bundleContext.registerService("com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider", new JacksonJsonProvider(), null);
     }
 
     @Override

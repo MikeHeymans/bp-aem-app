@@ -33,8 +33,8 @@
     <!-- ====================================================================== -->
     <artifactId>bp-aem-app.it.tests</artifactId>
     <packaging>bundle</packaging>
-    <name>aem-test-artifcat - Integration Tests Bundles</name>
-    <description>Bundles for Integration Tests for aem-test-artifcat</description>
+    <name>aem-test-artifact - Integration Tests Bundles</name>
+    <description>Bundles for Integration Tests for aem-test-artifact</description>
 
     <!-- <scm>
         <connection></connection>

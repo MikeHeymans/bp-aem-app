@@ -24,7 +24,7 @@ import java.util.List;
 public class CategoryRepository {
     public static final String DATA_ROOT = "/etc/commerce/bp-aem-app";
     public static final String MODEL_PATH = DATA_ROOT + "/categories";
-    private final Logger logger = LoggerFactory.getLogger(CategoryRepository.class);
+    private final Logger logger = LoggerFactory.getLogger("mike");
     @Reference
     protected SlingRepository repository;
 
@@ -34,10 +34,14 @@ public class CategoryRepository {
             session = getSession();
             Node node = getCategoryNode(session, category.getId());
             if (node != null) {
+                logger.debug("removing category node");
                 node.remove();
             }
+            logger.debug("creating category node");
             node = JcrUtils.getOrCreateByPath(getPath(category.getId()), NodeType.NT_UNSTRUCTURED, session);
+            logger.debug("mapping category to node");
             CategoryNodeMapper.modelToNode(category, node);
+            logger.debug("result mapping: " + node);
             session.refresh(true);
             session.save();
         } finally {
@@ -53,7 +57,9 @@ public class CategoryRepository {
         try {
             session = getSession();
             Node node = getCategoryNode(session, categoryId);
+            logger.debug("mapping note to category");
             category = CategoryNodeMapper.nodeToModel(node);
+            logger.debug("result mapping: " + category);
         } finally {
             if (session != null) {
                 session.logout();
@@ -82,9 +88,9 @@ public class CategoryRepository {
         return categoryList;
     }
 
-    private Node getCategoryNode(Session session, Long cateogry) throws RepositoryException {
-        logger.debug("getting category: " + getPath(cateogry));
-        return session.getNode(getPath(cateogry));
+    private Node getCategoryNode(Session session, Long categoryId) throws RepositoryException {
+        logger.debug("getting category: " + getPath(categoryId));
+        return JcrUtils.getNodeIfExists(getPath(categoryId), session);
     }
 
     private String getPath(Long categoryId) {
@@ -92,6 +98,7 @@ public class CategoryRepository {
     }
 
     private Session getSession() throws RepositoryException {
+        logger.debug("logging in for seesion");
         return repository.login(new SimpleCredentials("admin", "admin".toCharArray()));
     }
 }

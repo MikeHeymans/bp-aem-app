@@ -62,17 +62,16 @@ public class CategoryPageManager {
         Page categoryPage = pageManager.getPage(categoryRootPage.getPath() + "/" + category.getId());
         if (categoryPage == null) {
             categoryPage = pageManager.create(categoryRootPage.getPath(), String.valueOf(category.getId()), CATEGORY_TEMPLATE, CATEGORY_TITLE);
-            injectComponents(category, categoryPage, "nl");
+            injectComponents(category, categoryPage, languagePage.getLanguage(false).getLanguage());
         }
     }
 
     private void injectComponents(Category category, Page categoryPage, String language) throws RepositoryException {
         Resource contentResource = categoryPage.getContentResource();
         Node node = contentResource.adaptTo(Node.class);
-        node.setProperty("jcr:name", category.getName(language));
-        node.setProperty("jcr:id", category.getId());
-        node.setProperty("jcr:modified", Calendar.getInstance());
-
+        node.setProperty("ho:name", category.getName(language));
+        node.setProperty("ho:id", category.getId());
+        node.setProperty("ho:modified", Calendar.getInstance());
     }
 
     private Page getCategoryRootPage(Page languagePage, PageManager pageManager) throws WCMException {

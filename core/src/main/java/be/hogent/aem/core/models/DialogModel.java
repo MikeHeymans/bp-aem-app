@@ -42,6 +42,10 @@ public class DialogModel {
     @Named("text")
     @Optional
     private String text;
+    @Inject
+    @Named("size")
+    @Default(values = "4")
+    private String size;
 
     public String getTitle() {
         return StringUtils.isNotBlank(title) ? title : "Please provide a title";
@@ -49,5 +53,13 @@ public class DialogModel {
 
     public String getText() {
         return StringUtils.isNotBlank(text) ? text : "Please provide a Test";
+    }
+
+    public String getColWidth() {
+        return "col-xs-" + size;
+    }
+
+    public boolean isValid() {
+        return StringUtils.isNotBlank(title) && StringUtils.isNotBlank(text);
     }
 }

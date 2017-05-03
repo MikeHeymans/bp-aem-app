@@ -21,7 +21,7 @@
     <artifactId>bp-aem-app</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
-    <description>aem-test-artifcat</description>
+    <description>aem-test-artifact</description>
 
     <modules>
         <module>core</module>
@@ -453,7 +453,42 @@
                 <artifactId>jersey-all</artifactId>
                 <version>2.22.2</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.eclipsesource.jaxrs</groupId>
+                <artifactId>publisher</artifactId>
+                <version>5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.eclipsesource.jaxrs</groupId>
+                <artifactId>provider-security</artifactId>
+                <version>2.2</version>
+            </dependency>
+            <!-- Json marshalling -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-base</artifactId>
+                <version>2.6.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.6.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>2.6.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.6.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <version>2.6.1</version>
+            </dependency>
             <!-- JCR -->
             <dependency>
                 <groupId>javax.jcr</groupId>

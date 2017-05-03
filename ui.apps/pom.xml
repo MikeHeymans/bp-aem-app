@@ -33,8 +33,8 @@
     <!-- ====================================================================== -->
     <artifactId>bp-aem-app.ui.apps</artifactId>
     <packaging>content-package</packaging>
-    <name>aem-test-artifcat - UI apps</name>
-    <description>UI apps package for aem-test-artifcat</description>
+    <name>aem-test-artifact - UI apps</name>
+    <description>UI apps package for aem-test-artifact</description>
 
     <!-- <scm>
         <connection></connection>
@@ -129,6 +129,46 @@
                         <embedded>
                             <groupId>com.eclipsesource.jaxrs</groupId>
                             <artifactId>jersey-all</artifactId>
+                            <target>/apps/aem-test-app/install/10</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.eclipsesource.jaxrs</groupId>
+                            <artifactId>jersey-all</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.eclipsesource.jaxrs</groupId>
+                            <artifactId>publisher</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.eclipsesource.jaxrs</groupId>
+                            <artifactId>provider-security</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                            <artifactId>jackson-jaxrs-base</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-core</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-annotations</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-databind</artifactId>
+                            <target>/apps/aem-test-app/install/01</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                            <artifactId>jackson-jaxrs-json-provider</artifactId>
                             <target>/apps/aem-test-app/install/01</target>
                         </embedded>
                     </embeddeds>
@@ -228,9 +268,40 @@
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
 
+        <!-- jaxrs -->
         <dependency>
             <groupId>com.eclipsesource.jaxrs</groupId>
             <artifactId>jersey-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.eclipsesource.jaxrs</groupId>
+            <artifactId>publisher</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.eclipsesource.jaxrs</groupId>
+            <artifactId>provider-security</artifactId>
+        </dependency>
+
+        <!-- Json marshalling -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
         </dependency>
     </dependencies>
 </project>

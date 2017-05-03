@@ -30,8 +30,8 @@
     <!-- ====================================================================== -->
     <artifactId>bp-aem-app.it.launcher</artifactId>
     <packaging>jar</packaging>
-    <name>aem-test-artifcat - Integration Tests Launcher</name>
-    <description>Integration Tests Launcher for aem-test-artifcat</description>
+    <name>aem-test-artifact - Integration Tests Launcher</name>
+    <description>Integration Tests Launcher for aem-test-artifact</description>
 
     <!-- <scm>
         <connection></connection>

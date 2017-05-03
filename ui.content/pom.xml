@@ -33,8 +33,8 @@
     <!-- ====================================================================== -->
     <artifactId>bp-aem-app.ui.content</artifactId>
     <packaging>content-package</packaging>
-    <name>aem-test-artifcat - UI content</name>
-    <description>UI content package for aem-test-artifcat</description>
+    <name>aem-test-artifact - UI content</name>
+    <description>UI content package for aem-test-artifact</description>
 
     <!-- <scm>
         <connection></connection>
